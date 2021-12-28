@@ -4,13 +4,13 @@ import {Link} from 'react-router-dom';
 function NavBar () {
 
     return (
-        <div className="navbar">
+        <nav className="navbar">
             <Link to="/MovieList">Home Page </Link>
 
             <Link to="/MovieDetails">Movie Description</Link>
 
             <Link to="/AddMovie">Add New Movie</Link>
-        </div>
+        </nav>
     )
 }
 
