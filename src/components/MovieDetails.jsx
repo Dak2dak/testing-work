@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
 import BackToHomePage from './BackToHomePage';
+import StarRating from './StarRating';
 
 export default function MovieDetails(props) {
 
@@ -10,16 +11,17 @@ export default function MovieDetails(props) {
   movieSpecific = props.movies.find(elt => {return elt.id == movieId});
 
     return (
-      <div class="card text-white bg-primary mb-3" style={{ maWidth: "18rem" }}>
+      <div className="card text-white bg-primary mb-3" style={{ maWidth: "18rem" }}>
 
         <h2>Movie details</h2>
 
-        <div class="card-header">
+        <div className="card-header">
           <img src={movieSpecific.posterURL} alt="movie_image " />
+          <StarRating/>
         </div>
-        <div class="card-body">
-          <h5 class="card-title">{movieSpecific.title}</h5>
-          <p class="card-text">
+        <div className="card-body">
+          <h5 className="card-title">-----{movieSpecific.title}-----</h5>
+          <p className="card-text">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -32,9 +34,11 @@ export default function MovieDetails(props) {
           </p>
         </div>
 
-        <button>
-          <BackToHomePage />
-        </button>
+        <div className='bottom-btn'>
+          <button style={{width: "200px", height: "40px", borderRadius: "15px"}}>
+            <BackToHomePage />
+          </button>
+        </div>
       </div>
     );
 }
