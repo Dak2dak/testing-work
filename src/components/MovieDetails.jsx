@@ -2,6 +2,9 @@ import React from 'react'
 import BackToHomePage from './BackToHomePage';
 
 export default function MovieDetails(props) {
+  
+
+
     return (
       <div class="card text-white bg-primary mb-3" style={{ maWidth: "18rem" }}>
         <div class="card-header">

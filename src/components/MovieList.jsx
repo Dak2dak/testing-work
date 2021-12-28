@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import MovieCard from 'react';
 import StarRating from "./StarRating";
 
 
@@ -52,9 +51,7 @@ function MovieList () {
     const [movies, setMovies] = useState(datalist);
 
     return(
-        <div>
-            <MovieCard movies={movies} />
-        </div>
+        <></>
     )
 }
 
