@@ -4,8 +4,8 @@ import {Link} from 'react-router-dom';
 function NavBar () {
 
     return (
-        <div>
-            <Link to="/MovieList">Home Page</Link>
+        <div className="navbar">
+            <Link to="/MovieList">Home Page </Link>
 
             <Link to="/MovieDetails">Movie Description</Link>
 
