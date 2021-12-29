@@ -48,10 +48,14 @@ export default function AddMovie(props) {
                     </label>
                 </div>
 
-                <button type="submit" value="submit" class="btn btn-primary" >
-                    <FaPlusCircle style={{fontSize: "30px"}} />
-                </button>
+                <div>
+                    <button type="submit" value="submit" class="btn btn-primary" >
+                        <FaPlusCircle style={{fontSize: "30px"}} />
+                    </button>
+                </div>
             </form>
         </>
     )
 }
+
+// I'll getb back to this 'koz I don't like its design.

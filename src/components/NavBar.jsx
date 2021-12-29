@@ -5,7 +5,7 @@ function NavBar () {
 
     return (
         <nav className="navbar">
-            <Link to="/MovieList">Home Page </Link>
+            <Link to="/">Home Page </Link>
 
             <Link to="/MovieDetails">Movie Description</Link>
 

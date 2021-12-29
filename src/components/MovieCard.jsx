@@ -1,22 +1,21 @@
 import React from "react";
 
-function MovieCard (props) {
-
+function MovieCard({ movies }) {
     return (
-        <div className="card" style={{width: "18rem"}}>
-            <img className="card-img-top" src={props.movie.picture} alt="oups!"/>
-            <div className="card-body">
-                <h5 className="card-title">{props.movie.title}</h5>
-                <p className="card-text">{props.movie.description}</p>
-                <p className="card-text">{props.movie.rate}</p>
+        <div className="card col-12 col-md-3">
+            <div>
                 <div>
-                    <button className="btn btn-primary">
-                        More description
-                    </button>
+                    <img className="card-img-top" src={movies.posterURL} alt="oups!" />
+                </div>
+            
+                <div className="card-body">
+                    <h5 className="card-title">{movies.title}</h5>
+                    <p className="card-text">{movies.rate}</p>
+                    <div className="btn btn-primary">More Info</div>
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default MovieCard;
