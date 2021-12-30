@@ -24,9 +24,11 @@
 .bottom-btn {
   text-align: center;
   border-radius: 15px;
-  background-color: rgb(0, 900, 12, 0.349);
+  background-color: rgb(0, 81, 255);
   color: #fff;
   font-weight: bold;
+  border: none;
+  height: 50px;
 }
 
 .container {
@@ -59,4 +61,48 @@ a {
 
 .text-centered {
   text-align: center !important;
+}
+
+.text-white {
+  padding: 1rem 0 !important;
+}
+
+.card-1 {
+  margin: 0 3rem !important;
+  border-radius: 15px !important;
+  background-color: rgb(192, 192, 192, 0.2);
+}
+
+.img-box {
+  height: 500px;
+  border-top-left-radius: 15px !important;
+  width: 300px !important;
+  margin-right: 3rem !important;
+}
+
+.img-fluid-1 {
+  width: 100% !important;
+  border-top-left-radius: 15px !important;
+}
+
+.star-box {
+  margin-top: .8rem;
+  background-color: blue;
+  border-bottom-left-radius: 5px;
+}
+
+
+.text-box h2 {
+  margin: 1.5rem 0;
+  color: rgb(0, 81, 255);
+  padding-left: 2rem;
+}
+
+.card-titled {
+  margin: 2.5rem 0;
+}
+
+.description{
+  padding: 1rem 0 !important;
+  margin: 0 0 2rem 0 !important;
 }
