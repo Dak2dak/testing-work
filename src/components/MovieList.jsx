@@ -6,12 +6,12 @@ const MovieList = ({movies}) => {
     return(
         <> 
             <div className="container">
-                <div className="row gap-3"> 
-                    {movies.map((movie) => (<MovieCard movies={movies} /> ))}
+                <div className="row gap-4"> 
+                    {movies.map((movie) => (<MovieCard movie={movie} key={movie.id} /> ))}
                 </div>
             </div>
         </>
     )
 }
 
-export default MovieList;
+export default MovieList; 
