@@ -1,5 +1,6 @@
 import React from 'react';
 import './Style.css';
+import './Style1.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import myImage1 from './Img/movie1.jpg';
 import myImage2 from './Img/movie2.jpg';

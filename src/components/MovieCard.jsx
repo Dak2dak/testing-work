@@ -1,6 +1,9 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 
-function MovieCard({ movie }) {
+const MovieCard = ({ movie })  => {
+
+    let navigate = useNavigate();
 
     return (
         <div className="card col-12 col-md-3">
@@ -12,7 +15,13 @@ function MovieCard({ movie }) {
                 <div className="card-body">
                     <h5 className="card-title">{movie.title}</h5>
                     <p className="card-text text-centered">{movie.rate}</p>
-                    <div className="btn btn-primary">More Info</div>
+                    
+                    <button 
+                        className="btn btn-primary"
+                        onClick={() =>navigate("/MovieDetails/id")}
+                    >
+                        More Info
+                    </button>
                 </div>
             </div>
         </div>

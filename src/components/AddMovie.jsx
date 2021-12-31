@@ -1,61 +1,89 @@
 import React from 'react';
 import { useState } from 'react';
-import { FaPlusCircle } from 'react-icons/fa';
 import StarRating from './StarRating';
 
 export default function AddMovie(props) {
 
-    const [posterURL, setPosterURL] = useState("");
+    const [link, setLink] = useState("");
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
 
 
     return (
-        <>
-            <form onSubmit={() => props.handleAdd}>
-                <h1>Add new movies down below</h1>                
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Movie's Title</label>
-                    <input type="text" value={title} class="form-control" id="movieTitle" 
-                        placeholder="Enter Title..." onChange={(e) =>  {
-                            e.preventDefault();
-                            setTitle(e.target.value)}
-                            }/>
-                </div>
+        <div class="container">
+            <h4>Add new movies down below</h4>   
+            <div className='row'>
+                <div className="col-md-5" id="bg-clear">
+                    
+                    <hr />
+                    <div className="row">
+                        <label className="label col-md-2 control-label">TITLE</label>
+                        <div className="col-md-10">
+                            <input
+                                type="text"
+                                className="from-control"
+                                value={title}
+                                placeholder="title..."
+                                onChange={(e) =>  {
+                                    e.preventDefault();
+                                    setTitle(e.target.value)}
+                                }
+                            />
+                        </div>
+                    </div>
 
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Movie's URL</label>
-                    <input type="url" value={posterURL}  class="form-control" id="InputUrl" 
-                    placeholder="URL..." onChange={(e) => {
-                                e.preventDefault();
-                                setPosterURL(e.target.value)}
-                            }/>
-                </div>
+                    <div className="row">
+                        <label className="label col-md-2 control-label">URL</label>
+                        <div className="col-md-10">
+                            <input
+                                type="url"
+                                className="from-control"
+                                value={link}
+                                placeholder="URL..."
+                                onChange={(e) => {
+                                    e.preventDefault();
+                                    setLink(e.target.value)}
+                                }
+                            />
+                            <br />
+                        </div>
+                    </div>
 
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Movie's Description</label>
-                    <textarea type="text" value={description} class="form-control" id="InputUrl" 
-                    placeholder="Description..." onChange={(e) => {
-                                e.preventDefault();
-                                setDescription(e.target.value)}
-                            } />
-                </div>
+                    <div className="row">
+                        <label className="label col-md-2 control-label">DESCRIPTION</label>
+                        <div className="col-md-10">
+                            <textarea 
+                                className="from-control"
+                                required
+                                onChange={(e) => {
+                                    e.preventDefault();
+                                    setDescription(e.target.value)}
+                                }
+                            />
+                        </div>
+                    </div>
 
-                <div>
-                    <label>
-                        Rate the movie
-                        <StarRating />
-                    </label>
-                </div>
+                    <div className="row">
+                        <label className="label col-md-2 control-label">IMAGE</label>
+                        <div className="col-md-10 border-b-none">
+                            <input type="file" />
+                        </div>
+                    </div>
 
-                <div>
-                    <button type="submit" value="submit" class="btn btn-primary" >
-                        <FaPlusCircle style={{fontSize: "30px"}} />
-                    </button>
+                    <div className="row">
+                        <label className="label col-md-2 control-label">RATING</label>
+                        <div className="col-md-4">
+                            <StarRating />
+                        </div>
+                    </div>
+                    <hr />
+                    <div className="bottom-btn">
+                        <a href="/">
+                            <div className="btn btn-info">Submit</div>
+                        </a>
+                    </div>
                 </div>
-            </form>
-        </>
-    )
+            </div>
+        </div>
+    );
 }
-
-// I'll getb back to this 'koz I don't like its design.
