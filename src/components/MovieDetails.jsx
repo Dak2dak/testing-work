@@ -28,7 +28,7 @@ export default function MovieDetails({ movies }) {
                       <small className="text-muted">
                           <b>Click the link below to watch the movie: </b> 
                           <br />
-                        {movieSpecific.link}
+                        <Link to={`/moviedetails/${movieSpecific.link}`}>  {movieSpecific.link} </Link>
                       </small>
                   </p>
 

@@ -98,8 +98,8 @@ const App = () => {
       <Routes>
 
         <Route path="/" element = {<MovieList movies={movies} />} />
-        <Route path="/MovieDetails/:id" element = {<MovieDetails movies={movies}/>} />
-        <Route path="/AddMovie" element = {<AddMovie />} />
+        <Route path="moviedetails/:id" element = {<MovieDetails movies={movies}/>} />
+        <Route path="AddMovie" element = {<AddMovie />} />
     
       </Routes>
     </div>
